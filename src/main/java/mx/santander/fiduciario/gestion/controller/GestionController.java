@@ -42,13 +42,23 @@ public class GestionController {
 	
 	
 	
-	
+	//Bueno
+	/*
 	@GetMapping("/usuario")
 	public UserModel getApi() {
 		String url = "http://localhost:8080/authcontrol/v1/users/90003";
 		UserModel usuario = clienteRestTemplate.getForObject(url, UserModel.class);
 		return usuario;
+	}*/
+	
+	
+	@GetMapping("/test") 
+	public Object getApi(){
+		String url = "http://localhost:8080/authcontrol/v1/users/90003";
+		Object forObject = clienteRestTemplate.getForObject(url, Object.class);
+		return forObject;
 	}
+	
 	
 	
 	
