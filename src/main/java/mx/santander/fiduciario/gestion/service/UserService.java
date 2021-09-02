@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import mx.santander.fiduciario.gestion.controller.GestionController;
+import mx.santander.fiduciario.gestion.dto.usuarios.UserDataDto;
 import mx.santander.fiduciario.gestion.dto.usuarios.UserDto;
 import mx.santander.fiduciario.gestion.dto.usuarios.UserResDto;
 import mx.santander.fiduciario.gestion.model.UserModel;
@@ -28,10 +29,36 @@ public class UserService {
 		
 		
 		userModel = (List<UserModel>) gestionController.getApi();
+		
+		for (UserModel userM : userModel) {
+			
+			
+			/*
+			UserDto userDTOEntity = UserDto.builder()
+					.buc(userDTOEntity.getBuc())
+					.name(userDTOEntity.getName())
+					
+					//.lastName(userDTO.getLastName())
+					.build();
+			
+					/*
+			userResDto = UserResDto.builder()
+					.data(UserDataDto.builder()
+							.user(UserDto.builder()
+									.buc(buc)))
+			
+			*/
+			
+		}
+		
+		
+		
 			
 			
 		return null;
 	}
+	
+	
 	
 	
 	
